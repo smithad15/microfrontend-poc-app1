@@ -10,14 +10,20 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/webpack": "^4.41.13",
+    "html-webpack-plugin": "^4.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+    "ts-loader": "^7.0.5",
+    "typescript": "~3.7.2",
+    "webpack": "^5.0.0-beta.16",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_ENV=development PUBLIC_URL=http://localhost:8081/ webpack-dev-server --port 8081",
+    "build": "webpack",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
